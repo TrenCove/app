@@ -1,0 +1,6 @@
+[submodule "frontend-site"]
+	path = frontend-site
+	url = https://github.com/TrenCove/frontend-site.git
+[submodule "backend-server"]
+	path = backend-server
+	url = https://github.com/TrenCove/backend-server.git

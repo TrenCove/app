@@ -1,0 +1,38 @@
+version: "1.0"
+services:
+  auth-service:
+    build: ./backend-server/AuthService
+    volumes:
+      - ./db:/db
+    ports:
+      - "3001:3001"
+  auction-service:
+    build: ./backend-server/AuctionService
+    volumes:
+      - ./db:/db
+    ports:
+      - "3003:3003"
+  bidding-service:
+    build: ./backend-server/BiddingService
+    volumes:
+      - ./db:/db
+    ports:
+      - "3005:3005"
+  item-service:
+    build: ./backend-server/ItemService
+    volumes:
+      - ./db:/db
+    ports:
+      - "3002:3002"
+  payment-service:
+    build: ./backend-server/PaymentService
+    volumes:
+      - ./backend-server/db:/db
+    ports:
+      - "3004:3004"
+  frontend-server:
+    build: ./frontend-site
+    ports:
+    - "3000:3000"
+volumes:
+  db:
