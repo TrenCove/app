@@ -3,25 +3,25 @@ services:
   auth-service:
     build: ./backend-server/AuthService
     volumes:
-      - ./db:/db
+      - ./backend-server/db:/db
     ports:
       - "3001:3001"
   auction-service:
     build: ./backend-server/AuctionService
     volumes:
-      - ./db:/db
+      - ./backend-server/db:/db
     ports:
       - "3003:3003"
   bidding-service:
     build: ./backend-server/BiddingService
     volumes:
-      - ./db:/db
+      - ./backend-server/db:/db
     ports:
       - "3005:3005"
   item-service:
     build: ./backend-server/ItemService
     volumes:
-      - ./db:/db
+      - ./backend-server/db:/db
     ports:
       - "3002:3002"
   payment-service:
